@@ -1,0 +1,641 @@
+[23-12-23 13:10:38.570][22672] server start to listen.
+[23-12-23 13:10:43.389][14284] [client id 1] accepted.
+[23-12-23 13:10:43.389][22112] [client id 2] accepted.
+[23-12-23 13:10:43.389][5408] [client id 3] accepted.
+[23-12-23 13:10:43.390][12552] [client id 4] accepted.
+[23-12-23 13:10:43.390][5408] [client id 5] accepted.
+[23-12-23 13:10:43.390][22112] [client id 6] accepted.
+[23-12-23 13:10:43.390][14284] [client id 7] accepted.
+[23-12-23 13:10:43.390][12552] [client id 8] accepted.
+[23-12-23 13:10:43.390][5408] [client id 9] accepted.
+[23-12-23 13:10:43.390][22112] [client id 10] accepted.
+[23-12-23 13:10:43.394][14284] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 1
+[23-12-23 13:10:43.395][14284] count = 10
+[23-12-23 13:10:43.395][14284] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 1
+[23-12-23 13:10:43.395][14284] count = 20
+[23-12-23 13:10:43.398][22112] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 1
+[23-12-23 13:10:43.398][22112] count = 30
+[23-12-23 13:10:43.399][14284] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 2
+[23-12-23 13:10:43.399][12552] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 1
+[23-12-23 13:10:43.399][22112] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 1
+[23-12-23 13:10:43.399][14284] count = 40
+[23-12-23 13:10:43.399][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 1
+[23-12-23 13:10:43.399][14284] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 1
+[23-12-23 13:10:43.400][12552] count = 50
+[23-12-23 13:10:43.400][12552] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 2
+[23-12-23 13:10:43.400][22112] count = 60
+[23-12-23 13:10:43.400][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 1
+[23-12-23 13:10:43.400][5408] count = 70
+[23-12-23 13:10:43.400][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 1
+[23-12-23 13:10:43.400][14284] count = 80
+[23-12-23 13:10:43.400][14284] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 1
+[23-12-23 13:10:43.401][12552] count = 90
+[23-12-23 13:10:43.401][12552] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 1
+[23-12-23 13:10:43.401][22112] count = 100
+[23-12-23 13:10:43.401][22112] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 2
+[23-12-23 13:10:43.402][5408] count = 110
+[23-12-23 13:10:43.402][14284] count = 120
+[23-12-23 13:10:43.402][5408] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 1
+[23-12-23 13:10:43.402][14284] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 1
+[23-12-23 13:10:43.402][12552] count = 130
+[23-12-23 13:10:43.402][12552] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 1
+[23-12-23 13:10:43.402][22112] count = 140
+[23-12-23 13:10:43.402][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 2
+[23-12-23 13:10:43.402][5408] count = 150
+[23-12-23 13:10:43.402][5408] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 2
+[23-12-23 13:10:43.402][14284] count = 160
+[23-12-23 13:10:43.402][14284] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 2
+[23-12-23 13:10:43.402][12552] count = 170
+[23-12-23 13:10:43.404][22112] count = 180
+[23-12-23 13:10:43.404][5408] count = 190
+[23-12-23 13:10:43.405][14284] count = 200
+[23-12-23 13:10:43.444][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 3
+[23-12-23 13:10:43.444][12552] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 3
+[23-12-23 13:10:43.444][22112] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 3
+[23-12-23 13:10:43.444][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 3
+[23-12-23 13:10:43.444][22112] count = 210
+[23-12-23 13:10:43.444][22112] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 3
+[23-12-23 13:10:43.444][12552] count = 220
+[23-12-23 13:10:43.445][12552] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 3
+[23-12-23 13:10:43.445][5408] count = 230
+[23-12-23 13:10:43.445][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 3
+[23-12-23 13:10:43.445][14284] count = 240
+[23-12-23 13:10:43.445][14284] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 3
+[23-12-23 13:10:43.445][22112] count = 250
+[23-12-23 13:10:43.445][22112] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 3
+[23-12-23 13:10:43.445][12552] count = 260
+[23-12-23 13:10:43.445][12552] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 4
+[23-12-23 13:10:43.445][5408] count = 270
+[23-12-23 13:10:43.446][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 3
+[23-12-23 13:10:43.446][14284] count = 280
+[23-12-23 13:10:43.446][14284] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 3
+[23-12-23 13:10:43.446][22112] count = 290
+[23-12-23 13:10:43.446][22112] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 4
+[23-12-23 13:10:43.446][12552] count = 300
+[23-12-23 13:10:43.446][12552] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 3
+[23-12-23 13:10:43.446][5408] count = 310
+[23-12-23 13:10:43.446][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 3
+[23-12-23 13:10:43.446][14284] count = 320
+[23-12-23 13:10:43.446][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 3
+[23-12-23 13:10:43.446][22112] count = 330
+[23-12-23 13:10:43.446][22112] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 4
+[23-12-23 13:10:43.446][12552] count = 340
+[23-12-23 13:10:43.446][12552] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 3
+[23-12-23 13:10:43.447][5408] count = 350
+[23-12-23 13:10:43.447][5408] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 4
+[23-12-23 13:10:43.447][14284] count = 360
+[23-12-23 13:10:43.447][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 4
+[23-12-23 13:10:43.447][22112] count = 370
+[23-12-23 13:10:43.449][12552] count = 380
+[23-12-23 13:10:43.449][5408] count = 390
+[23-12-23 13:10:43.450][14284] count = 400
+[23-12-23 13:10:43.481][12552] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 5
+[23-12-23 13:10:43.481][22112] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 5
+[23-12-23 13:10:43.481][5408] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 5
+[23-12-23 13:10:43.481][14284] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 5
+[23-12-23 13:10:43.482][12552] count = 410
+[23-12-23 13:10:43.482][22112] count = 420
+[23-12-23 13:10:43.482][5408] count = 430
+[23-12-23 13:10:43.482][5408] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 5
+[23-12-23 13:10:43.483][14284] count = 440
+[23-12-23 13:10:43.483][5408] count = 450
+[23-12-23 13:10:43.489][14284] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 5
+[23-12-23 13:10:43.490][14284] count = 460
+[23-12-23 13:10:43.490][12552] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 6
+[23-12-23 13:10:43.491][12552] count = 470
+[23-12-23 13:10:43.497][14284] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 5
+[23-12-23 13:10:43.497][22112] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 5
+[23-12-23 13:10:43.497][12552] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 5
+[23-12-23 13:10:43.497][5408] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 5
+[23-12-23 13:10:43.497][14284] count = 480
+[23-12-23 13:10:43.497][14284] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 5
+[23-12-23 13:10:43.497][22112] count = 490
+[23-12-23 13:10:43.497][22112] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 5
+[23-12-23 13:10:43.497][12552] count = 500
+[23-12-23 13:10:43.498][12552] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 5
+[23-12-23 13:10:43.498][5408] count = 510
+[23-12-23 13:10:43.498][5408] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 6
+[23-12-23 13:10:43.498][14284] count = 520
+[23-12-23 13:10:43.498][14284] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 5
+[23-12-23 13:10:43.498][22112] count = 530
+[23-12-23 13:10:43.499][12552] count = 540
+[23-12-23 13:10:43.499][22112] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 6
+[23-12-23 13:10:43.499][12552] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 5
+[23-12-23 13:10:43.499][5408] count = 550
+[23-12-23 13:10:43.500][14284] count = 560
+[23-12-23 13:10:43.500][14284] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 6
+[23-12-23 13:10:43.500][22112] count = 570
+[23-12-23 13:10:43.501][12552] count = 580
+[23-12-23 13:10:43.501][12552] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 5
+[23-12-23 13:10:43.501][14284] count = 590
+[23-12-23 13:10:43.502][12552] count = 600
+[23-12-23 13:10:43.518][5408] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 7
+[23-12-23 13:10:43.518][12552] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 7
+[23-12-23 13:10:43.518][22112] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 7
+[23-12-23 13:10:43.518][14284] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 7
+[23-12-23 13:10:43.519][12552] count = 610
+[23-12-23 13:10:43.519][22112] count = 620
+[23-12-23 13:10:43.520][5408] count = 630
+[23-12-23 13:10:43.520][22112] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 8
+[23-12-23 13:10:43.521][14284] count = 640
+[23-12-23 13:10:43.521][22112] count = 650
+[23-12-23 13:10:43.522][14284] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 8
+[23-12-23 13:10:43.522][5408] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 8
+[23-12-23 13:10:43.523][14284] count = 660
+[23-12-23 13:10:43.523][5408] count = 670
+[23-12-23 13:10:43.529][14284] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 7
+[23-12-23 13:10:43.529][22112] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 7
+[23-12-23 13:10:43.529][5408] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 7
+[23-12-23 13:10:43.529][12552] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 7
+[23-12-23 13:10:43.529][22112] count = 680
+[23-12-23 13:10:43.529][22112] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 7
+[23-12-23 13:10:43.529][14284] count = 690
+[23-12-23 13:10:43.529][14284] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 7
+[23-12-23 13:10:43.529][5408] count = 700
+[23-12-23 13:10:43.530][5408] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 7
+[23-12-23 13:10:43.530][12552] count = 710
+[23-12-23 13:10:43.531][22112] count = 720
+[23-12-23 13:10:43.531][12552] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 7
+[23-12-23 13:10:43.531][22112] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 7
+[23-12-23 13:10:43.531][14284] count = 730
+[23-12-23 13:10:43.531][5408] count = 740
+[23-12-23 13:10:43.531][14284] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 8
+[23-12-23 13:10:43.531][5408] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 8
+[23-12-23 13:10:43.531][14284] count = 750
+[23-12-23 13:10:43.531][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 8
+[23-12-23 13:10:43.531][22112] count = 760
+[23-12-23 13:10:43.532][12552] count = 770
+[23-12-23 13:10:43.532][12552] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 7
+[23-12-23 13:10:43.533][5408] count = 780
+[23-12-23 13:10:43.533][14284] count = 790
+[23-12-23 13:10:43.534][12552] count = 800
+[23-12-23 13:10:43.556][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 9
+[23-12-23 13:10:43.556][22112] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 9
+[23-12-23 13:10:43.556][12552] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 9
+[23-12-23 13:10:43.556][5408] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 9
+[23-12-23 13:10:43.557][14284] count = 810
+[23-12-23 13:10:43.557][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 9
+[23-12-23 13:10:43.557][22112] count = 820
+[23-12-23 13:10:43.557][22112] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 9
+[23-12-23 13:10:43.557][12552] count = 830
+[23-12-23 13:10:43.557][12552] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 9
+[23-12-23 13:10:43.557][5408] count = 840
+[23-12-23 13:10:43.558][14284] count = 850
+[23-12-23 13:10:43.558][22112] count = 860
+[23-12-23 13:10:43.559][12552] count = 870
+[23-12-23 13:10:43.559][22112] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 9
+[23-12-23 13:10:43.559][5408] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 9
+[23-12-23 13:10:43.559][12552] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 9
+[23-12-23 13:10:43.559][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 9
+[23-12-23 13:10:43.559][22112] count = 880
+[23-12-23 13:10:43.560][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 9
+[23-12-23 13:10:43.560][5408] count = 890
+[23-12-23 13:10:43.560][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 9
+[23-12-23 13:10:43.560][12552] count = 900
+[23-12-23 13:10:43.560][12552] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 10
+[23-12-23 13:10:43.560][14284] count = 910
+[23-12-23 13:10:43.561][14284] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 10
+[23-12-23 13:10:43.561][22112] count = 920
+[23-12-23 13:10:43.561][22112] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 10
+[23-12-23 13:10:43.561][5408] count = 930
+[23-12-23 13:10:43.561][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 9
+[23-12-23 13:10:43.561][12552] count = 940
+[23-12-23 13:10:43.561][12552] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 9
+[23-12-23 13:10:43.561][14284] count = 950
+[23-12-23 13:10:43.561][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 10
+[23-12-23 13:10:43.561][22112] count = 960
+[23-12-23 13:10:43.561][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 10
+[23-12-23 13:10:43.561][5408] count = 970
+[23-12-23 13:10:43.562][12552] count = 980
+[23-12-23 13:10:43.563][14284] count = 990
+[23-12-23 13:10:43.563][22112] count = 1000
+[23-12-23 13:10:43.593][22112] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 11
+[23-12-23 13:10:43.594][5408] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 11
+[23-12-23 13:10:43.594][12552] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 11
+[23-12-23 13:10:43.594][14284] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 11
+[23-12-23 13:10:43.594][22112] count = 1010
+[23-12-23 13:10:43.594][22112] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 11
+[23-12-23 13:10:43.594][5408] count = 1020
+[23-12-23 13:10:43.594][5408] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 11
+[23-12-23 13:10:43.594][12552] count = 1030
+[23-12-23 13:10:43.595][14284] count = 1040
+[23-12-23 13:10:43.595][12552] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 11
+[23-12-23 13:10:43.595][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 11
+[23-12-23 13:10:43.595][22112] count = 1050
+[23-12-23 13:10:43.595][22112] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 11
+[23-12-23 13:10:43.595][5408] count = 1060
+[23-12-23 13:10:43.596][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 11
+[23-12-23 13:10:43.596][12552] count = 1070
+[23-12-23 13:10:43.596][12552] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 12
+[23-12-23 13:10:43.596][14284] count = 1080
+[23-12-23 13:10:43.596][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 12
+[23-12-23 13:10:43.596][22112] count = 1090
+[23-12-23 13:10:43.596][22112] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 12
+[23-12-23 13:10:43.596][5408] count = 1100
+[23-12-23 13:10:43.596][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 12
+[23-12-23 13:10:43.596][12552] count = 1110
+[23-12-23 13:10:43.596][12552] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 11
+[23-12-23 13:10:43.596][14284] count = 1120
+[23-12-23 13:10:43.596][14284] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 12
+[23-12-23 13:10:43.596][22112] count = 1130
+[23-12-23 13:10:43.597][22112] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 12
+[23-12-23 13:10:43.597][5408] count = 1140
+[23-12-23 13:10:43.597][5408] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 12
+[23-12-23 13:10:43.597][12552] count = 1150
+[23-12-23 13:10:43.597][12552] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 12
+[23-12-23 13:10:43.597][14284] count = 1160
+[23-12-23 13:10:43.597][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 12
+[23-12-23 13:10:43.597][22112] count = 1170
+[23-12-23 13:10:43.598][5408] count = 1180
+[23-12-23 13:10:43.598][12552] count = 1190
+[23-12-23 13:10:43.599][14284] count = 1200
+[23-12-23 13:10:43.629][22112] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 13
+[23-12-23 13:10:43.629][14284] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 13
+[23-12-23 13:10:43.629][5408] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 13
+[23-12-23 13:10:43.629][12552] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 13
+[23-12-23 13:10:43.629][22112] count = 1210
+[23-12-23 13:10:43.629][22112] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 13
+[23-12-23 13:10:43.629][14284] count = 1220
+[23-12-23 13:10:43.630][5408] count = 1230
+[23-12-23 13:10:43.630][14284] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 14
+[23-12-23 13:10:43.630][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 13
+[23-12-23 13:10:43.631][14284] count = 1240
+[23-12-23 13:10:43.631][22112] count = 1250
+[23-12-23 13:10:43.631][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 13
+[23-12-23 13:10:43.631][22112] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 13
+[23-12-23 13:10:43.631][12552] count = 1260
+[23-12-23 13:10:43.631][12552] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 13
+[23-12-23 13:10:43.631][5408] count = 1270
+[23-12-23 13:10:43.631][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 14
+[23-12-23 13:10:43.631][14284] count = 1280
+[23-12-23 13:10:43.631][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 14
+[23-12-23 13:10:43.631][22112] count = 1290
+[23-12-23 13:10:43.631][22112] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 14
+[23-12-23 13:10:43.631][12552] count = 1300
+[23-12-23 13:10:43.631][12552] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 14
+[23-12-23 13:10:43.631][5408] count = 1310
+[23-12-23 13:10:43.632][5408] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 13
+[23-12-23 13:10:43.632][14284] count = 1320
+[23-12-23 13:10:43.632][14284] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 13
+[23-12-23 13:10:43.632][22112] count = 1330
+[23-12-23 13:10:43.632][22112] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 14
+[23-12-23 13:10:43.632][12552] count = 1340
+[23-12-23 13:10:43.632][12552] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 14
+[23-12-23 13:10:43.632][5408] count = 1350
+[23-12-23 13:10:43.632][5408] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 14
+[23-12-23 13:10:43.632][14284] count = 1360
+[23-12-23 13:10:43.634][22112] count = 1370
+[23-12-23 13:10:43.634][12552] count = 1380
+[23-12-23 13:10:43.634][22112] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 14
+[23-12-23 13:10:43.634][5408] count = 1390
+[23-12-23 13:10:43.635][22112] count = 1400
+[23-12-23 13:10:43.663][12552] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 15
+[23-12-23 13:10:43.663][14284] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 15
+[23-12-23 13:10:43.663][5408] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 15
+[23-12-23 13:10:43.663][22112] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 15
+[23-12-23 13:10:43.663][12552] count = 1410
+[23-12-23 13:10:43.663][12552] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 15
+[23-12-23 13:10:43.663][14284] count = 1420
+[23-12-23 13:10:43.663][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 15
+[23-12-23 13:10:43.663][5408] count = 1430
+[23-12-23 13:10:43.664][22112] count = 1440
+[23-12-23 13:10:43.664][5408] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 16
+[23-12-23 13:10:43.664][22112] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 15
+[23-12-23 13:10:43.664][12552] count = 1450
+[23-12-23 13:10:43.665][12552] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 15
+[23-12-23 13:10:43.665][14284] count = 1460
+[23-12-23 13:10:43.665][14284] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 15
+[23-12-23 13:10:43.665][5408] count = 1470
+[23-12-23 13:10:43.665][5408] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 15
+[23-12-23 13:10:43.665][22112] count = 1480
+[23-12-23 13:10:43.665][22112] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 15
+[23-12-23 13:10:43.665][12552] count = 1490
+[23-12-23 13:10:43.665][12552] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 16
+[23-12-23 13:10:43.665][14284] count = 1500
+[23-12-23 13:10:43.665][14284] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 15
+[23-12-23 13:10:43.665][5408] count = 1510
+[23-12-23 13:10:43.665][5408] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 16
+[23-12-23 13:10:43.665][22112] count = 1520
+[23-12-23 13:10:43.665][22112] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 16
+[23-12-23 13:10:43.665][12552] count = 1530
+[23-12-23 13:10:43.666][12552] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 16
+[23-12-23 13:10:43.666][14284] count = 1540
+[23-12-23 13:10:43.666][14284] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 16
+[23-12-23 13:10:43.666][5408] count = 1550
+[23-12-23 13:10:43.666][5408] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 16
+[23-12-23 13:10:43.666][22112] count = 1560
+[23-12-23 13:10:43.666][22112] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 16
+[23-12-23 13:10:43.666][12552] count = 1570
+[23-12-23 13:10:43.668][14284] count = 1580
+[23-12-23 13:10:43.668][5408] count = 1590
+[23-12-23 13:10:43.669][22112] count = 1600
+[23-12-23 13:10:43.706][22112] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 17
+[23-12-23 13:10:43.706][5408] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 17
+[23-12-23 13:10:43.706][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 17
+[23-12-23 13:10:43.706][12552] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 17
+[23-12-23 13:10:43.706][22112] count = 1610
+[23-12-23 13:10:43.706][22112] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 17
+[23-12-23 13:10:43.706][5408] count = 1620
+[23-12-23 13:10:43.706][5408] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 17
+[23-12-23 13:10:43.706][14284] count = 1630
+[23-12-23 13:10:43.707][12552] count = 1640
+[23-12-23 13:10:43.707][14284] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 18
+[23-12-23 13:10:43.707][12552] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 17
+[23-12-23 13:10:43.707][22112] count = 1650
+[23-12-23 13:10:43.708][22112] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 17
+[23-12-23 13:10:43.708][5408] count = 1660
+[23-12-23 13:10:43.708][5408] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 17
+[23-12-23 13:10:43.708][14284] count = 1670
+[23-12-23 13:10:43.708][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 17
+[23-12-23 13:10:43.708][12552] count = 1680
+[23-12-23 13:10:43.708][12552] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 18
+[23-12-23 13:10:43.708][22112] count = 1690
+[23-12-23 13:10:43.708][22112] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 18
+[23-12-23 13:10:43.708][5408] count = 1700
+[23-12-23 13:10:43.708][5408] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 18
+[23-12-23 13:10:43.708][14284] count = 1710
+[23-12-23 13:10:43.708][14284] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 18
+[23-12-23 13:10:43.708][12552] count = 1720
+[23-12-23 13:10:43.708][22112] count = 1730
+[23-12-23 13:10:43.708][12552] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 18
+[23-12-23 13:10:43.709][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 18
+[23-12-23 13:10:43.709][12552] count = 1740
+[23-12-23 13:10:43.709][12552] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 18
+[23-12-23 13:10:43.709][14284] count = 1750
+[23-12-23 13:10:43.709][14284] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 18
+[23-12-23 13:10:43.709][5408] count = 1760
+[23-12-23 13:10:43.709][5408] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 18
+[23-12-23 13:10:43.709][22112] count = 1770
+[23-12-23 13:10:43.710][12552] count = 1780
+[23-12-23 13:10:43.711][14284] count = 1790
+[23-12-23 13:10:43.711][5408] count = 1800
+[23-12-23 13:10:43.745][22112] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 19
+[23-12-23 13:10:43.745][14284] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 19
+[23-12-23 13:10:43.745][12552] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 19
+[23-12-23 13:10:43.745][5408] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 19
+[23-12-23 13:10:43.745][22112] count = 1810
+[23-12-23 13:10:43.746][22112] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 19
+[23-12-23 13:10:43.746][14284] count = 1820
+[23-12-23 13:10:43.746][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 19
+[23-12-23 13:10:43.746][12552] count = 1830
+[23-12-23 13:10:43.746][12552] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 19
+[23-12-23 13:10:43.746][5408] count = 1840
+[23-12-23 13:10:43.747][5408] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 20
+[23-12-23 13:10:43.747][22112] count = 1850
+[23-12-23 13:10:43.747][22112] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 20
+[23-12-23 13:10:43.747][14284] count = 1860
+[23-12-23 13:10:43.747][14284] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 20
+[23-12-23 13:10:43.747][14284] count = 1870
+[23-12-23 13:10:43.749][14284] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 20
+[23-12-23 13:10:43.749][5408] count = 1880
+[23-12-23 13:10:43.749][5408] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 19
+[23-12-23 13:10:43.749][22112] count = 1890
+[23-12-23 13:10:43.749][22112] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 19
+[23-12-23 13:10:43.749][12552] count = 1900
+[23-12-23 13:10:43.749][12552] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 19
+[23-12-23 13:10:43.749][14284] count = 1910
+[23-12-23 13:10:43.749][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 20
+[23-12-23 13:10:43.749][5408] count = 1920
+[23-12-23 13:10:43.750][5408] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 19
+[23-12-23 13:10:43.750][22112] count = 1930
+[23-12-23 13:10:43.750][22112] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 20
+[23-12-23 13:10:43.750][22112] count = 1940
+[23-12-23 13:10:43.750][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 19
+[23-12-23 13:10:43.750][14284] count = 1950
+[23-12-23 13:10:43.750][14284] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 20
+[23-12-23 13:10:43.750][5408] count = 1960
+[23-12-23 13:10:43.752][12552] count = 1970
+[23-12-23 13:10:43.752][12552] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 19
+[23-12-23 13:10:43.752][22112] count = 1980
+[23-12-23 13:10:43.753][14284] count = 1990
+[23-12-23 13:10:43.754][12552] count = 2000
+[23-12-23 13:10:43.790][12552] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 21
+[23-12-23 13:10:43.790][5408] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 21
+[23-12-23 13:10:43.791][22112] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 21
+[23-12-23 13:10:43.791][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 21
+[23-12-23 13:10:43.791][12552] count = 2010
+[23-12-23 13:10:43.791][12552] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 21
+[23-12-23 13:10:43.791][5408] count = 2020
+[23-12-23 13:10:43.792][22112] count = 2030
+[23-12-23 13:10:43.792][5408] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 21
+[23-12-23 13:10:43.792][22112] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 22
+[23-12-23 13:10:43.792][14284] count = 2040
+[23-12-23 13:10:43.792][14284] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 21
+[23-12-23 13:10:43.792][12552] count = 2050
+[23-12-23 13:10:43.792][12552] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 21
+[23-12-23 13:10:43.792][5408] count = 2060
+[23-12-23 13:10:43.792][5408] [client id 8] received. read bytes : 32, packet id : 1, x : 2, y : 22
+[23-12-23 13:10:43.793][22112] count = 2070
+[23-12-23 13:10:43.793][22112] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 21
+[23-12-23 13:10:43.793][14284] count = 2080
+[23-12-23 13:10:43.793][14284] [client id 10] received. read bytes : 32, packet id : 1, x : 3, y : 21
+[23-12-23 13:10:43.793][12552] count = 2090
+[23-12-23 13:10:43.793][12552] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 22
+[23-12-23 13:10:43.793][5408] count = 2100
+[23-12-23 13:10:43.793][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 21
+[23-12-23 13:10:43.793][22112] count = 2110
+[23-12-23 13:10:43.793][22112] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 22
+[23-12-23 13:10:43.793][14284] count = 2120
+[23-12-23 13:10:43.793][14284] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 21
+[23-12-23 13:10:43.793][12552] count = 2130
+[23-12-23 13:10:43.793][12552] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 22
+[23-12-23 13:10:43.793][14284] count = 2140
+[23-12-23 13:10:43.794][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 22
+[23-12-23 13:10:43.794][22112] count = 2150
+[23-12-23 13:10:43.795][5408] count = 2160
+[23-12-23 13:10:43.795][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 22
+[23-12-23 13:10:43.795][12552] count = 2170
+[23-12-23 13:10:43.796][22112] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 22
+[23-12-23 13:10:43.796][14284] count = 2180
+[23-12-23 13:10:43.797][5408] count = 2190
+[23-12-23 13:10:43.797][22112] count = 2200
+[23-12-23 13:10:43.842][14284] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 23
+[23-12-23 13:10:43.842][5408] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 23
+[23-12-23 13:10:43.842][22112] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 23
+[23-12-23 13:10:43.842][12552] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 23
+[23-12-23 13:10:43.843][14284] count = 2210
+[23-12-23 13:10:43.843][14284] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 23
+[23-12-23 13:10:43.843][5408] count = 2220
+[23-12-23 13:10:43.843][5408] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 23
+[23-12-23 13:10:43.843][22112] count = 2230
+[23-12-23 13:10:43.844][12552] count = 2240
+[23-12-23 13:10:43.844][22112] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 24
+[23-12-23 13:10:43.844][12552] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 23
+[23-12-23 13:10:43.844][14284] count = 2250
+[23-12-23 13:10:43.844][14284] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 23
+[23-12-23 13:10:43.844][5408] count = 2260
+[23-12-23 13:10:43.844][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 23
+[23-12-23 13:10:43.844][22112] count = 2270
+[23-12-23 13:10:43.844][22112] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 23
+[23-12-23 13:10:43.844][12552] count = 2280
+[23-12-23 13:10:43.845][12552] [client id 9] received. read bytes : 32, packet id : 1, x : 4, y : 24
+[23-12-23 13:10:43.845][14284] count = 2290
+[23-12-23 13:10:43.845][14284] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 24
+[23-12-23 13:10:43.845][5408] count = 2300
+[23-12-23 13:10:43.845][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 24
+[23-12-23 13:10:43.845][22112] count = 2310
+[23-12-23 13:10:43.845][22112] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 24
+[23-12-23 13:10:43.845][12552] count = 2320
+[23-12-23 13:10:43.845][12552] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 24
+[23-12-23 13:10:43.845][14284] count = 2330
+[23-12-23 13:10:43.845][14284] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 24
+[23-12-23 13:10:43.845][5408] count = 2340
+[23-12-23 13:10:43.845][5408] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 24
+[23-12-23 13:10:43.845][22112] count = 2350
+[23-12-23 13:10:43.846][22112] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 24
+[23-12-23 13:10:43.846][12552] count = 2360
+[23-12-23 13:10:43.846][12552] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 24
+[23-12-23 13:10:43.846][14284] count = 2370
+[23-12-23 13:10:43.847][5408] count = 2380
+[23-12-23 13:10:43.847][22112] count = 2390
+[23-12-23 13:10:43.848][12552] count = 2400
+[23-12-23 13:10:43.877][5408] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 25
+[23-12-23 13:10:43.877][12552] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 25
+[23-12-23 13:10:43.877][14284] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 25
+[23-12-23 13:10:43.877][22112] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 25
+[23-12-23 13:10:43.878][12552] count = 2410
+[23-12-23 13:10:43.878][12552] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 25
+[23-12-23 13:10:43.878][5408] count = 2420
+[23-12-23 13:10:43.878][5408] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 25
+[23-12-23 13:10:43.878][14284] count = 2430
+[23-12-23 13:10:43.879][22112] count = 2440
+[23-12-23 13:10:43.879][14284] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 25
+[23-12-23 13:10:43.879][22112] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 25
+[23-12-23 13:10:43.879][12552] count = 2450
+[23-12-23 13:10:43.879][12552] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 26
+[23-12-23 13:10:43.879][5408] count = 2460
+[23-12-23 13:10:43.880][5408] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 25
+[23-12-23 13:10:43.880][14284] count = 2470
+[23-12-23 13:10:43.880][14284] [client id 5] received. read bytes : 32, packet id : 1, x : 1, y : 25
+[23-12-23 13:10:43.880][22112] count = 2480
+[23-12-23 13:10:43.880][22112] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 26
+[23-12-23 13:10:43.880][12552] count = 2490
+[23-12-23 13:10:43.880][12552] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 25
+[23-12-23 13:10:43.880][5408] count = 2500
+[23-12-23 13:10:43.880][5408] [client id 6] received. read bytes : 32, packet id : 1, x : 9, y : 26
+[23-12-23 13:10:43.880][14284] count = 2510
+[23-12-23 13:10:43.880][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 26
+[23-12-23 13:10:43.880][22112] count = 2520
+[23-12-23 13:10:43.881][22112] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 26
+[23-12-23 13:10:43.881][12552] count = 2530
+[23-12-23 13:10:43.881][12552] [client id 2] received. read bytes : 32, packet id : 1, x : 8, y : 25
+[23-12-23 13:10:43.881][5408] count = 2540
+[23-12-23 13:10:43.881][5408] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 26
+[23-12-23 13:10:43.881][14284] count = 2550
+[23-12-23 13:10:43.881][14284] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 26
+[23-12-23 13:10:43.881][22112] count = 2560
+[23-12-23 13:10:43.881][22112] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 26
+[23-12-23 13:10:43.881][12552] count = 2570
+[23-12-23 13:10:43.883][5408] count = 2580
+[23-12-23 13:10:43.883][14284] count = 2590
+[23-12-23 13:10:43.884][22112] count = 2600
+[23-12-23 13:10:43.917][5408] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 27
+[23-12-23 13:10:43.917][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 27
+[23-12-23 13:10:43.918][5408] count = 2610
+[23-12-23 13:10:43.918][14284] count = 2620
+[23-12-23 13:10:43.919][14284] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 27
+[23-12-23 13:10:43.919][14284] count = 2630
+[23-12-23 13:10:43.919][5408] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 27
+[23-12-23 13:10:43.919][14284] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 27
+[23-12-23 13:10:43.920][12552] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 27
+[23-12-23 13:10:43.921][5408] count = 2640
+[23-12-23 13:10:43.921][22112] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 27
+[23-12-23 13:10:43.921][14284] count = 2650
+[23-12-23 13:10:43.921][5408] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 27
+[23-12-23 13:10:43.924][5408] count = 2660
+[23-12-23 13:10:43.925][22112] count = 2670
+[23-12-23 13:10:43.925][14284] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 28
+[23-12-23 13:10:43.925][12552] count = 2680
+[23-12-23 13:10:43.925][5408] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 27
+[23-12-23 13:10:43.925][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 27
+[23-12-23 13:10:43.926][14284] count = 2690
+[23-12-23 13:10:43.926][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 28
+[23-12-23 13:10:43.926][5408] count = 2700
+[23-12-23 13:10:43.927][5408] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 28
+[23-12-23 13:10:43.927][12552] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 28
+[23-12-23 13:10:43.927][22112] count = 2710
+[23-12-23 13:10:43.927][22112] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 28
+[23-12-23 13:10:43.927][14284] count = 2720
+[23-12-23 13:10:43.927][14284] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 28
+[23-12-23 13:10:43.927][5408] count = 2730
+[23-12-23 13:10:43.927][5408] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 28
+[23-12-23 13:10:43.928][5408] count = 2740
+[23-12-23 13:10:43.928][5408] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 28
+[23-12-23 13:10:43.928][22112] count = 2750
+[23-12-23 13:10:43.929][14284] count = 2760
+[23-12-23 13:10:43.929][22112] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 28
+[23-12-23 13:10:43.929][22112] count = 2770
+[23-12-23 13:10:43.929][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 28
+[23-12-23 13:10:43.930][5408] count = 2780
+[23-12-23 13:10:43.931][12552] count = 2790
+[23-12-23 13:10:43.932][14284] count = 2800
+[23-12-23 13:10:43.956][14284] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 29
+[23-12-23 13:10:43.956][5408] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 29
+[23-12-23 13:10:43.956][22112] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 29
+[23-12-23 13:10:43.956][12552] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 29
+[23-12-23 13:10:43.956][14284] count = 2810
+[23-12-23 13:10:43.956][14284] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 29
+[23-12-23 13:10:43.957][5408] count = 2820
+[23-12-23 13:10:43.957][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 29
+[23-12-23 13:10:43.957][22112] count = 2830
+[23-12-23 13:10:43.957][22112] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 29
+[23-12-23 13:10:43.957][12552] count = 2840
+[23-12-23 13:10:43.958][14284] count = 2850
+[23-12-23 13:10:43.958][14284] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 29
+[23-12-23 13:10:43.958][5408] count = 2860
+[23-12-23 13:10:43.958][12552] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 30
+[23-12-23 13:10:43.958][5408] [client id 7] received. read bytes : 32, packet id : 1, x : 5, y : 29
+[23-12-23 13:10:43.958][22112] count = 2870
+[23-12-23 13:10:43.959][22112] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 30
+[23-12-23 13:10:43.959][14284] count = 2880
+[23-12-23 13:10:43.959][14284] [client id 1] received. read bytes : 32, packet id : 1, x : 6, y : 30
+[23-12-23 13:10:43.959][12552] count = 2890
+[23-12-23 13:10:43.959][12552] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 29
+[23-12-23 13:10:43.959][5408] count = 2900
+[23-12-23 13:10:43.959][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 29
+[23-12-23 13:10:43.959][22112] count = 2910
+[23-12-23 13:10:43.959][22112] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 30
+[23-12-23 13:10:43.959][14284] count = 2920
+[23-12-23 13:10:43.960][14284] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 30
+[23-12-23 13:10:43.960][12552] count = 2930
+[23-12-23 13:10:43.960][12552] [client id 3] received. read bytes : 32, packet id : 1, x : 7, y : 30
+[23-12-23 13:10:43.960][5408] count = 2940
+[23-12-23 13:10:43.960][5408] [client id 4] received. read bytes : 32, packet id : 1, x : 10, y : 30
+[23-12-23 13:10:43.960][22112] count = 2950
+[23-12-23 13:10:43.960][22112] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 30
+[23-12-23 13:10:43.960][14284] count = 2960
+[23-12-23 13:10:43.962][12552] count = 2970
+[23-12-23 13:10:43.963][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 30
+[23-12-23 13:10:43.963][5408] count = 2980
+[23-12-23 13:10:43.963][22112] count = 2990
+[23-12-23 13:10:43.964][14284] count = 3000
+[23-12-23 13:10:44.010][14284] [client id 3] received. read bytes : 16, packet id : 1, x : 7, y : 30
+[23-12-23 13:10:44.010][5408] [client id 6] received. read bytes : 16, packet id : 1, x : 9, y : 30
+[23-12-23 13:10:44.010][22112] [client id 4] received. read bytes : 16, packet id : 1, x : 10, y : 30
+[23-12-23 13:10:44.011][12552] [client id 1] received. read bytes : 16, packet id : 1, x : 6, y : 30
+[23-12-23 13:10:44.011][14284] count = 3010
+[23-12-23 13:10:44.011][14284] [client id 2] received. read bytes : 16, packet id : 1, x : 8, y : 30
+[23-12-23 13:10:44.011][5408] count = 3020
+[23-12-23 13:10:44.012][22112] count = 3030
+[23-12-23 13:10:44.012][22112] [client id 5] received. read bytes : 16, packet id : 1, x : 1, y : 30
+[23-12-23 13:10:44.012][5408] [client id 7] received. read bytes : 16, packet id : 1, x : 5, y : 30
+[23-12-23 13:10:44.012][22112] count = 3040
+[23-12-23 13:10:44.012][22112] [client id 8] received. read bytes : 16, packet id : 1, x : 2, y : 30
+[23-12-23 13:10:44.012][14284] count = 3050
+[23-12-23 13:10:44.012][14284] [client id 10] received. read bytes : 16, packet id : 1, x : 3, y : 30
+[23-12-23 13:10:44.012][14284] count = 3060
+[23-12-23 13:10:44.012][14284] [client id 9] received. read bytes : 16, packet id : 1, x : 4, y : 30
+[23-12-23 13:10:44.013][12552] count = 3070
+[23-12-23 13:10:44.013][22112] count = 3080
+[23-12-23 13:10:44.015][5408] count = 3090
+[23-12-23 13:10:44.015][14284] count = 3100
+[23-12-23 13:10:52.908][12552] [client id 10] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][22112] [client id 5] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][5408] [client id 9] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][12552] [client id 1] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][5408] [client id 6] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][22112] [client id 3] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][14284] [client id 8] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][5408] [client id 4] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][22112] [client id 2] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+[23-12-23 13:10:52.908][12552] [client id 7] receive error => 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
