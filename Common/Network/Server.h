@@ -11,8 +11,9 @@ class Client;
 class Server : public std::enable_shared_from_this<Server>
 {
 public:
-    Server(const int port, const int io_thread_count);
+    Server(const int port);
 
+    void Initialize(const int io_thread_count);
     void Listen();
     void Join();
     void Broadcast(BasePacket& packet);
@@ -21,6 +22,7 @@ public:
 
 private:
     void OnAccept(std::shared_ptr<Client> client, const boost::system::error_code& error);
+    void IOThreadRun();
 
 private:
     std::list<std::shared_ptr<Client>> _list_client;

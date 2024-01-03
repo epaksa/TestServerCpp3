@@ -16,12 +16,14 @@ public:
     const int PopAll(OUT char* result_buffer);
     const bool SetWriteIndex(const int index);
     void Copy(RingBuffer& buffer);
+    const int AvailableSize();
 
     const int GetReadIndex() { return _read_index; }
     const int GetWriteIndex() { return _write_index; }
 
     inline const char* Data() { return _buffer; }
     inline const bool Empty() { return (_read_index == _write_index); }
+    inline const char* IndexToWrite() { return &(_buffer[_write_index]); }
 
 private:
     const bool CanPush(const int size);

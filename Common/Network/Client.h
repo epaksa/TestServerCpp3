@@ -33,7 +33,6 @@ private:
 private:
     int _id = 0;
     RingBuffer _read_buffer;
-    RingBuffer _temp_buffer;
     std::shared_ptr<Server> _server;
     
     std::queue<std::shared_ptr<char>> _queue_send_buffer;

@@ -6,7 +6,8 @@ int main()
 {
     Log::Start();
 
-    std::shared_ptr<Server> server = std::make_shared<Server>(19001, 4);
+    std::shared_ptr<Server> server = std::make_shared<Server>(19001);
+    server->Initialize(4);
 
     const std::string log = std::format("server start to listen.");
     Log::Write(log);

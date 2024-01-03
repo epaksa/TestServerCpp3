@@ -3,12 +3,18 @@
 #include "../Log/Log.h"
 #include "Packet/Packet.h"
 
-Server::Server(const int port, const int io_thread_count) :
-    _io_context_guard(boost::asio::make_work_guard<boost::asio::io_context>(_io_context)), _acceptor(_io_context, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port))
+Server::Server(const int port) :
+    _io_context_guard(boost::asio::make_work_guard<boost::asio::io_context>(_io_context)),
+    _acceptor(_io_context, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port))
+{
+    
+}
+
+void Server::Initialize(const int io_thread_count)
 {
     for (int i = 0; i < io_thread_count; ++i)
     {
-        _pool_thread.create_thread(boost::bind(&boost::asio::io_context::run, &_io_context));
+        _pool_thread.create_thread(boost::bind(&Server::IOThreadRun, shared_from_this()));
     }
 }
 
@@ -47,10 +53,10 @@ void Server::Broadcast(BasePacket& packet)
             client->Send(send_buffer, data_size);
             ++count;
         }
-
-        std::string log = std::format("count = {}", count);
-        Log::Write(log);
     }
+
+    std::string log = std::format("count = {}", count);
+    Log::Write(log);
 }
 
 void Server::OnSocketError(const int error_client_id)
@@ -87,4 +93,21 @@ void Server::OnAccept(std::shared_ptr<Client> client, const boost::system::error
     }
 
     Log::Write(accept_log);
+}
+
+void Server::IOThreadRun()
+{
+    while (true)
+    {
+        try
+        {
+            _io_context.run();
+            break; // run() exited normally
+        }
+        catch (std::exception const& e)
+        {
+            std::string exception_log = std::format("asio exception. msg : {}", e.what());
+            Log::Write(exception_log);
+        }
+    }
 }

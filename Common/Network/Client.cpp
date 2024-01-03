@@ -11,25 +11,12 @@ std::shared_ptr<Client> Client::Create(const int id, boost::asio::io_context& _i
 
 Client::Client(const int id, boost::asio::io_context& _io_context, std::shared_ptr<Server> server) : _id(id), _socket(_io_context), _strand(boost::asio::make_strand(_io_context)), _server(server)
 {
-    _temp_buffer.Clear();
     _read_buffer.Clear();
 }
 
 void Client::Receive()
 {
-    // clear하고, temp buffer를 쓰는거면.. 이름만 ring buffer지 ring buffer를 쓰는게 아니야.. 현재 들어있는 data양만큼 read buffer에 +시켜준걸 read some할때 넘겨줘야하지 않나..
-    // 일단 temp 버퍼로 packet처리하는거 확인하고나서 고치자. 그리고...
-    /*
-    - common에서 다 처리하고 있는거 고치고 싶음
-        - 그럼 1 map이라도 login 처리하는 thread가 있어야함
-            - 지금은 그냥 broadcast였다. network thread에서 그냥 처리하는거
-                이걸 login thread 처리하는걸로 바꿔야 됨.
-                packet class들어오니까 볼륨이 어느정도 있네..
-    - 일단 common에서 packet처리하는거 만들고
-    - packet 받고 broadcast까지 확인 후에, logic thread 처리 시작하기
-    */
-    _read_buffer.Clear();
-    _socket.async_read_some(boost::asio::buffer((void*)_read_buffer.Data(), BUFFER_SIZE - 1),
+    _socket.async_read_some(boost::asio::buffer((void*)_read_buffer.IndexToWrite(), _read_buffer.AvailableSize()),
         boost::asio::bind_executor(_strand, boost::bind(&Client::OnReceive, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred)));
 }
 
@@ -72,8 +59,6 @@ void Client::OnReceive(const boost::system::error_code& error, const size_t byte
         {
             if (false == CanMakePacket(OUT packet_buffer, OUT packet_size))
             {
-                _temp_buffer.Clear();
-                _temp_buffer.Copy(_read_buffer);
                 break;
             }
 
@@ -166,35 +151,19 @@ const bool Client::CanMakePacket(OUT char* packet_buffer, OUT int& packet_size)
 {
     int current_size = 0;
 
-    if (false == _temp_buffer.Empty())
+    if (_read_buffer.Empty())
     {
-        Log::Write("temp buffer is not empty!!");
-
-        if (false == _temp_buffer.Pop(OUT packet_buffer, sizeof(int)))
-        {
-            Log::Write("get sizeof(int) failed in temp buffer.");
-            return false;
-        }
-
-        current_size = sizeof(int);
-        current_size += _temp_buffer.PopAll(OUT packet_buffer + current_size);
+        Log::Write("read buffer empty.");
+        return false;
     }
-    else
+
+    if (false == _read_buffer.Pop(OUT packet_buffer, sizeof(int)))
     {
-        if (_read_buffer.Empty())
-        {
-            Log::Write("read buffer empty.");
-            return false;
-        }
-
-        if (false == _read_buffer.Pop(OUT packet_buffer, sizeof(int)))
-        {
-            Log::Write("get sizeof(int) failed in read buffer.");
-            return false;
-        }
-
-        current_size = sizeof(int);
+        Log::Write("get sizeof(int) failed in read buffer.");
+        return false;
     }
+
+    current_size = sizeof(int);
 
     packet_size = packet_buffer[0];
 

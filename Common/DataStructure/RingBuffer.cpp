@@ -86,12 +86,48 @@ void RingBuffer::Copy(RingBuffer& buffer)
     _write_index = buffer.GetWriteIndex();
 }
 
+const int RingBuffer::AvailableSize()
+{
+    if (_read_index > _write_index)
+    {
+        return ((BUFFER_SIZE - 1) - ((_write_index + BUFFER_SIZE) - _read_index));
+    }
+    else
+    {
+        return ((BUFFER_SIZE - 1) - (_write_index - _read_index));
+    }
+}
+
 const bool RingBuffer::CanPush(const int size)
 {
-    return (size < BUFFER_SIZE && (_write_index + size - BUFFER_SIZE) < _read_index);
+    if (size <= 0 || size >= BUFFER_SIZE)
+    {
+        return false;
+    }
+
+    if (_read_index > _write_index)
+    {
+        return (size <= (BUFFER_SIZE - 1) - ((_write_index + BUFFER_SIZE) - _read_index));
+    }
+    else
+    {
+        return (size <= (BUFFER_SIZE - 1) - (_write_index - _read_index));
+    }
 }
 
 const bool RingBuffer::CanPop(const int size)
 {
-    return (size < BUFFER_SIZE && (_read_index + size - BUFFER_SIZE) <= _write_index);
+    if (size <= 0 || size >= BUFFER_SIZE)
+    {
+        return false;
+    }
+
+    if (_read_index > _write_index)
+    {
+        return (size <= (_write_index + BUFFER_SIZE) - _read_index);
+    }
+    else
+    {
+        return (size <= _write_index - _read_index);
+    }
 }
