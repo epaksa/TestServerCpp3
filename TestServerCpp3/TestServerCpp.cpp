@@ -4,7 +4,9 @@
 
 int main()
 {
-    Log::Start();
+    std::string log_file_name = "log.txt";
+
+    Log::Start(log_file_name);
 
     std::shared_ptr<Server> server = std::make_shared<Server>(19001);
     server->Initialize(4);

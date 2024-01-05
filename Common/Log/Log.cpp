@@ -9,9 +9,9 @@
 
 Concurrency::concurrent_queue<std::string> Log::_queue;
 
-void Log::Run()
+void Log::Run(const std::string& file_name)
 {
-    std::ofstream fout("log.txt");
+    std::ofstream fout(file_name);
 
     std::string message;
 
@@ -27,9 +27,9 @@ void Log::Run()
     fout.close();
 }
 
-void Log::Start()
+void Log::Start(const std::string& file_name)
 {
-    std::thread log_thread(&Log::Run);
+    std::thread log_thread(&Log::Run, file_name);
     log_thread.detach();
 }
 

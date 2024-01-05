@@ -24,7 +24,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game\Zone.cpp" />
     <ClCompile Include="TestServerCpp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game\Zone.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
