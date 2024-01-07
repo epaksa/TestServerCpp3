@@ -85,6 +85,11 @@ void Server::OnAccept(std::shared_ptr<Client> client, const boost::system::error
             ++_next_client_id;
         }
 
+        {
+            std::shared_ptr<cs_login> packet = std::make_shared<cs_login>();
+            packet->_client_id = client->GetID();
+        }
+
         Listen();
     }
     else

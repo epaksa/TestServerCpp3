@@ -27,6 +27,66 @@ const int BasePacket::Deserialize(const char* data)
     return result_size;
 }
 
+const int cs_login::Serialize(OUT char* result)
+{
+    int result_size = 0;
+
+    result_size += __super::Serialize(result);
+
+    memcpy_s(result + result_size, (rsize_t)result - result_size, (void*)&_client_id, sizeof(_client_id));
+    result_size += sizeof(_client_id);
+
+    return result_size;
+}
+
+const int cs_login::Deserialize(const char* data)
+{
+    int result_size = 0;
+
+    result_size += __super::Deserialize(data);
+
+    memcpy_s(&_client_id, sizeof(_client_id), (void*)(data + result_size), sizeof(_client_id));
+    result_size += sizeof(_client_id);
+
+    return result_size;
+}
+
+const int sc_login::Serialize(OUT char* result)
+{
+    int result_size = 0;
+
+    result_size += __super::Serialize(result);
+
+    memcpy_s(result + result_size, (rsize_t)result - result_size, (void*)&_client_id, sizeof(_client_id));
+    result_size += sizeof(_client_id);
+
+    memcpy_s(result + result_size, (rsize_t)result - result_size, (void*)&_x, sizeof(_x));
+    result_size += sizeof(_x);
+
+    memcpy_s(result + result_size, (rsize_t)result - result_size, (void*)&_y, sizeof(_y));
+    result_size += sizeof(_y);
+
+    return result_size;
+}
+
+const int sc_login::Deserialize(const char* data)
+{
+    int result_size = 0;
+
+    result_size += __super::Deserialize(data);
+
+    memcpy_s(&_client_id, sizeof(_client_id), (void*)(data + result_size), sizeof(_client_id));
+    result_size += sizeof(_client_id);
+
+    memcpy_s(&_x, sizeof(_x), (void*)(data + result_size), sizeof(_x));
+    result_size += sizeof(_x);
+
+    memcpy_s(&_y, sizeof(_y), (void*)(data + result_size), sizeof(_y));
+    result_size += sizeof(_y);
+
+    return result_size;
+}
+
 const int cs_move::Serialize(OUT char* result)
 {
     int result_size = 0;

@@ -16,18 +16,42 @@
     <Filter Include="Game">
       <UniqueIdentifier>{fa068683-84f1-4017-aa35-5b9dcaaa2b2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Zone">
+      <UniqueIdentifier>{70c068b8-dd3f-429a-aec3-2605bebbf0ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object">
+      <UniqueIdentifier>{d8f990c6-f940-4ce0-8a51-b80df14cc7aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestServerCpp.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Zone.cpp">
-      <Filter>Game</Filter>
+    <ClCompile Include="Game\Zone\Zone.cpp">
+      <Filter>Game\Zone</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Zone\Tile.cpp">
+      <Filter>Game\Zone</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Object\Player.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Object\Object.cpp">
+      <Filter>Game\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game\Zone.h">
-      <Filter>Game</Filter>
+    <ClInclude Include="Game\Zone\Zone.h">
+      <Filter>Game\Zone</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Zone\Tile.h">
+      <Filter>Game\Zone</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Object\Object.h">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Object\Player.h">
+      <Filter>Game\Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

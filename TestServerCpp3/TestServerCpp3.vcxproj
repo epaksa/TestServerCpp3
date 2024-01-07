@@ -24,11 +24,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game\Zone.cpp" />
+    <ClCompile Include="Game\Object\Object.cpp" />
+    <ClCompile Include="Game\Object\Player.cpp" />
+    <ClCompile Include="Game\Zone\Tile.cpp" />
+    <ClCompile Include="Game\Zone\Zone.cpp" />
     <ClCompile Include="TestServerCpp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game\Zone.h" />
+    <ClInclude Include="Game\Object\Object.h" />
+    <ClInclude Include="Game\Object\Player.h" />
+    <ClInclude Include="Game\Zone\Tile.h" />
+    <ClInclude Include="Game\Zone\Zone.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
