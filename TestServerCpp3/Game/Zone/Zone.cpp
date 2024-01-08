@@ -106,7 +106,7 @@ void Zone::HandlePacketContext(std::shared_ptr<PacketContext> context)
     switch (context->_packet->_packet_id)
     {
     case PacketID::cs_login:
-        ProcessPacket((cs_login*)context->_packet.get());
+        ProcessPacket((cs_login*)context->_packet.get(), context->_client);
         break;
     case PacketID::cs_move:
         ProcessPacket((cs_move*)context->_packet.get());
@@ -116,7 +116,7 @@ void Zone::HandlePacketContext(std::shared_ptr<PacketContext> context)
     }
 }
 
-void Zone::ProcessPacket(cs_login* packet)
+void Zone::ProcessPacket(cs_login* packet, std::shared_ptr<Client> client)
 {
     if (nullptr == _server)
     {
@@ -151,7 +151,14 @@ void Zone::ProcessPacket(cs_login* packet)
     const std::string log = std::format("cs_login => id : {}. x : {}, y : {}", packet->_client_id, x, y);
     Log::Write(log);
 
-    _server->Broadcast(response);
+    client->Send(response);
+
+    sc_welcome broadcast_packet;
+    broadcast_packet._client_id = packet->_client_id;
+    broadcast_packet._x = x;
+    broadcast_packet._y = y;
+
+    _server->Broadcast(broadcast_packet);
 }
 
 void Zone::ProcessPacket(cs_move* packet)

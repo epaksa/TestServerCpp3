@@ -9,6 +9,7 @@ enum class PacketID : int
     none,
     cs_login,
     sc_login,
+    sc_welcome,
     cs_move,
     sc_move,
     sc_logout
@@ -48,6 +49,21 @@ struct sc_login : public BasePacket
     int _y = 0;
 
     sc_login() : BasePacket(sizeof(sc_login) - sizeof(void*), PacketID::sc_login)
+    {
+
+    }
+
+    virtual const int Serialize(OUT char* result) final override;
+    virtual const int Deserialize(const char* data) final override;
+};
+
+struct sc_welcome : public BasePacket
+{
+    int _client_id = 0;
+    int _x = 0;
+    int _y = 0;
+
+    sc_welcome() : BasePacket(sizeof(sc_welcome) - sizeof(void*), PacketID::sc_welcome)
     {
 
     }

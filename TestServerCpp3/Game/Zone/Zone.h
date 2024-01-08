@@ -9,6 +9,7 @@
 
 struct PacketContext;
 
+class Client;
 class Server;
 class Object;
 
@@ -26,7 +27,7 @@ private:
     static void Run();
 
     static void HandlePacketContext(std::shared_ptr<PacketContext> context);
-    static void ProcessPacket(cs_login* packet);
+    static void ProcessPacket(cs_login* packet, std::shared_ptr<Client> client);
     static void ProcessPacket(cs_move* packet);
 
     static const bool CheckTile(const int x, const int y);
