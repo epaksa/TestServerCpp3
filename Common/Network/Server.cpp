@@ -1,9 +1,9 @@
 #include "Server.h"
-#include "Client.h"
 #include "../Log/Log.h"
 #include "Packet/Packet.h"
 
-Server::Server(const int port) :
+Server::Server(const int port, Concurrency::concurrent_queue<std::shared_ptr<PacketContext>>* const packet_context_queue) :
+    _packet_context_queue(packet_context_queue),
     _io_context_guard(boost::asio::make_work_guard<boost::asio::io_context>(_io_context)),
     _acceptor(_io_context, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port))
 {
@@ -38,8 +38,6 @@ void Server::Join()
 
 void Server::Broadcast(BasePacket& packet)
 {
-    static int count = 0;
-
     char* c = new char[BUFFER_SIZE] {0};
     std::shared_ptr<char> send_buffer(c);
 
@@ -51,12 +49,8 @@ void Server::Broadcast(BasePacket& packet)
         for (const std::shared_ptr<Client> client : _list_client)
         {
             client->Send(send_buffer, data_size);
-            ++count;
         }
     }
-
-    std::string log = std::format("count = {}", count);
-    Log::Write(log);
 }
 
 void Server::OnSocketError(const int error_client_id)
@@ -66,6 +60,17 @@ void Server::OnSocketError(const int error_client_id)
     _list_client.remove_if([=](const std::shared_ptr<Client> client) {
         return client->GetID() == error_client_id;
         });
+}
+
+void Server::PushPacketContext(std::shared_ptr<PacketContext> context)
+{
+    if (nullptr == _packet_context_queue)
+    {
+        Log::Write("_packet_context_queue is null.");
+        return;
+    }
+
+    _packet_context_queue->push(context);
 }
 
 void Server::OnAccept(std::shared_ptr<Client> client, const boost::system::error_code& error)
@@ -86,8 +91,15 @@ void Server::OnAccept(std::shared_ptr<Client> client, const boost::system::error
         }
 
         {
+            std::shared_ptr<PacketContext> context = std::make_shared<PacketContext>();
+            
             std::shared_ptr<cs_login> packet = std::make_shared<cs_login>();
             packet->_client_id = client->GetID();
+
+            context->_client = client;
+            context->_packet = packet;
+
+            PushPacketContext(context);
         }
 
         Listen();

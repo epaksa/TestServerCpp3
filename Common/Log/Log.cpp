@@ -3,7 +3,6 @@
 #include <fstream>
 #include <sstream>
 #include <thread>
-#include <format>
 
 #define OUT
 

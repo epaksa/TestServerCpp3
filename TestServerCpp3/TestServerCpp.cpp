@@ -13,11 +13,12 @@ int main()
     ZONE.Initialize(map_file_name);
     ZONE.Start();
 
-    std::shared_ptr<Server> server = std::make_shared<Server>(19001);
+    std::shared_ptr<Server> server = std::make_shared<Server>(19001, &(ZONE.GetPacketContextQueue()));
     server->Initialize(4);
 
-    const std::string log = std::format("server start to listen.");
-    Log::Write(log);
+    ZONE.SetServer(server);
+
+    Log::Write("server start to listen.");
 
     server->Listen();
     server->Join();

@@ -53,8 +53,6 @@ void Client::OnReceive(const boost::system::error_code& error, const size_t byte
         int packet_size = 0;
         int remain_bytes = (int)bytes_transferred;
 
-        std::vector<std::shared_ptr<BasePacket>> list_packet;
-
         while (remain_bytes > 0)
         {
             if (false == CanMakePacket(OUT packet_buffer, OUT packet_size))
@@ -62,12 +60,16 @@ void Client::OnReceive(const boost::system::error_code& error, const size_t byte
                 break;
             }
 
-            // worker thread로 원래는 넘어가야하고, buffer 및 packet instance life cycle에 대한 고민을 해야함
             std::shared_ptr<BasePacket> packet = MakePacket(packet_buffer, packet_size);
 
             if (nullptr != packet)
             {
-                list_packet.push_back(packet);
+                std::shared_ptr<PacketContext> context = std::make_shared<PacketContext>();
+
+                context->_client = shared_from_this();
+                context->_packet = packet;
+
+                _server->PushPacketContext(context);
             }
             else
             {
@@ -80,22 +82,6 @@ void Client::OnReceive(const boost::system::error_code& error, const size_t byte
         }
 
         Receive();
-
-        // worker thread로 원래는 넘어가야하는 내용임
-        for (const std::shared_ptr<BasePacket> packet : list_packet)
-        {
-            sc_move move_packet;
-            move_packet._move_client_id = _id;
-            move_packet._x = ((cs_move*)packet.get())->_x;
-            move_packet._y = ((cs_move*)packet.get())->_y;
-
-            // commented for broadcast test
-            const std::string receive_log = std::format("[client id {}] received. read bytes : {}, packet id : {}, x : {}, y : {}", _id, bytes_transferred, (int)packet->_packet_id, move_packet._x, move_packet._y);
-
-            Log::Write(receive_log);
-
-            _server->Broadcast(move_packet);
-        }
     }
     else
     {
