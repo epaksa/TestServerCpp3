@@ -3,6 +3,7 @@
 #include <concurrent_queue.h>
 #include <string>
 #include <vector>
+#include <map>
 #include <Network/Packet/Packet.h>
 #include <Etc/Random.h>
 #include "Tile.h"
@@ -12,6 +13,14 @@ struct PacketContext;
 class Client;
 class Server;
 class Object;
+
+struct Pos
+{
+    int _x = 0;
+    int _y = 0;
+
+    Pos(const int x, const int y) : _x(x), _y(y) {}
+};
 
 class Zone
 {
@@ -28,16 +37,20 @@ private:
 
     static void HandlePacketContext(std::shared_ptr<PacketContext> context);
     static void ProcessPacket(cs_login* packet, std::shared_ptr<Client> client);
-    static void ProcessPacket(cs_move* packet);
+    static void ProcessPacket(cs_move* packet, std::shared_ptr<Client> client);
 
     static const bool CheckTile(const int x, const int y);
-    static const bool SetTile(const int x, const int y, Object* const object);
+    static void SetObject(const int x, const int y, Object* const object);
+    static void SetObject(const int current_x, const int current_y, const int next_x, const int next_y);
+    static const bool GetCurrentPos(OUT int& out_x, OUT int& out_y, const int object_id);
 
 private:
     static Concurrency::concurrent_queue<std::shared_ptr<PacketContext>> _packet_context_queue;
     static std::shared_ptr<Server> _server;
 
     static std::vector<std::vector<Tile>> _tile;
+    static std::map<int, Pos> _object_info;
+    
     static Random _random;
 };
 

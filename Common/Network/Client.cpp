@@ -22,7 +22,9 @@ void Client::Receive()
 
 void Client::Send(BasePacket& packet)
 {
-    std::shared_ptr<char> send_buffer = std::make_shared<char>();
+    char* c = new char[BUFFER_SIZE] {0};
+    std::shared_ptr<char> send_buffer(c);
+
     const int data_size = packet.Serialize(OUT send_buffer.get());
 
     Send(send_buffer, data_size);
@@ -99,18 +101,9 @@ void Client::OnSend(const boost::system::error_code& error, const size_t bytes_t
         _queue_send_buffer.pop();
     }
 
-    std::string log;
-
-    if (!error)
+    if (error)
     {
-        // commented for broadcast test
-        /*log = std::format("[client id {}] sent. sent bytes : {}", _id, bytes_transferred);
-
-        Log::Write(log);*/
-    }
-    else
-    {
-        log = std::format("[client id {}] sent error => {}", _id, error.message());
+        std::string log = std::format("[client id {}] sent error => {}", _id, error.message());
 
         OnError(log);
     }

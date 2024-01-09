@@ -25,6 +25,9 @@
     <Filter Include="Network\Packet">
       <UniqueIdentifier>{014e67d8-d584-41ea-9b95-678d76a19121}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Etc">
+      <UniqueIdentifier>{c044cbfc-0136-4f93-9c70-43bf030c05ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructure\RingBuffer.cpp">
@@ -42,6 +45,9 @@
     <ClCompile Include="Network\Packet\Packet.cpp">
       <Filter>Network\Packet</Filter>
     </ClCompile>
+    <ClCompile Include="Etc\Random.cpp">
+      <Filter>Etc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructure\RingBuffer.h">
@@ -58,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="Network\Packet\Packet.h">
       <Filter>Network\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Etc\Random.h">
+      <Filter>Etc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
