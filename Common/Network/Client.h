@@ -40,6 +40,4 @@ private:
 
     boost::asio::ip::tcp::socket _socket;
     boost::asio::strand<boost::asio::io_context::executor_type> _strand;
-
-    int receive_count = 0;
 };
