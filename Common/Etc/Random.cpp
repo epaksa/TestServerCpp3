@@ -1,6 +1,6 @@
 #include "Random.h"
 
-Random::Random() : _dist(0, INT32_MAX)
+Random::Random() : _dist(0, INT32_MAX), _mt(_rd())
 {
 }
 

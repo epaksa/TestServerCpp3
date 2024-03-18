@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 #define OUT
 
@@ -12,6 +13,7 @@ enum class PacketID : int
     sc_welcome,
     cs_move,
     sc_move,
+    cs_logout,
     sc_logout
 };
 
@@ -20,7 +22,7 @@ struct BasePacket
     int _size = 0;
     PacketID _packet_id = PacketID::none;
 
-    BasePacket(const int size, const PacketID packet_id) : _size(size), _packet_id(packet_id)
+    BasePacket(const PacketID packet_id) : _packet_id(packet_id)
     {
 
     }
@@ -33,7 +35,7 @@ struct cs_login : public BasePacket
 {
     int _client_id = 0;
 
-    cs_login() : BasePacket(sizeof(cs_login) - sizeof(void*), PacketID::cs_login)
+    cs_login() : BasePacket(PacketID::cs_login)
     {
 
     }
@@ -44,11 +46,17 @@ struct cs_login : public BasePacket
 
 struct sc_login : public BasePacket
 {
-    int _client_id = 0;
-    int _x = 0;
-    int _y = 0;
+    struct ClientPos
+    {
+        int _client_id = 0;
+        int _x = 0;
+        int _y = 0;
+    };
 
-    sc_login() : BasePacket(sizeof(sc_login) - sizeof(void*), PacketID::sc_login)
+    ClientPos _my_info;
+    std::vector<ClientPos> _list_client;
+
+    sc_login() : BasePacket(PacketID::sc_login)
     {
 
     }
@@ -63,7 +71,7 @@ struct sc_welcome : public BasePacket
     int _x = 0;
     int _y = 0;
 
-    sc_welcome() : BasePacket(sizeof(sc_welcome) - sizeof(void*), PacketID::sc_welcome)
+    sc_welcome() : BasePacket(PacketID::sc_welcome)
     {
 
     }
@@ -77,7 +85,7 @@ struct cs_move : public BasePacket
     int _x = 0;
     int _y = 0;
 
-    cs_move() : BasePacket(sizeof(cs_move) - sizeof(void*), PacketID::cs_move)
+    cs_move() : BasePacket(PacketID::cs_move)
     {
 
     }
@@ -92,7 +100,33 @@ struct sc_move : public BasePacket
     int _x = 0;
     int _y = 0;
 
-    sc_move() : BasePacket(sizeof(sc_move) - sizeof(void*), PacketID::sc_move)
+    sc_move() : BasePacket(PacketID::sc_move)
+    {
+
+    }
+
+    virtual const int Serialize(OUT char* result) final override;
+    virtual const int Deserialize(const char* data) final override;
+};
+
+struct cs_logout : public BasePacket
+{
+    int _client_id = 0;
+
+    cs_logout() : BasePacket(PacketID::cs_logout)
+    {
+
+    }
+
+    virtual const int Serialize(OUT char* result) final override;
+    virtual const int Deserialize(const char* data) final override;
+};
+
+struct sc_logout : public BasePacket
+{
+    int _client_id = 0;
+
+    sc_logout() : BasePacket(PacketID::sc_logout)
     {
 
     }

@@ -28,7 +28,7 @@ private:
     void OnError(const std::string& error_message);
 
     const bool CanMakePacket(OUT char* packet_buffer, OUT int& packet_size);
-    std::shared_ptr<BasePacket> MakePacket(const char* packet_buffer, const int packet_size);
+    std::shared_ptr<BasePacket> MakePacket(const char* packet_buffer);
 
 private:
     int _id = 0;

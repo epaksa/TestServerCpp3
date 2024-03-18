@@ -62,7 +62,7 @@ void Client::OnReceive(const boost::system::error_code& error, const size_t byte
                 break;
             }
 
-            std::shared_ptr<BasePacket> packet = MakePacket(packet_buffer, packet_size);
+            std::shared_ptr<BasePacket> packet = MakePacket(packet_buffer);
 
             if (nullptr != packet)
             {
@@ -90,6 +90,16 @@ void Client::OnReceive(const boost::system::error_code& error, const size_t byte
         const std::string error_log = std::format("[client id {}] receive error => {}", _id, error.message());
 
         OnError(error_log);
+
+        std::shared_ptr<cs_logout> packet = std::make_shared<cs_logout>();
+        packet->_client_id = _id;
+        
+        std::shared_ptr<PacketContext> context = std::make_shared<PacketContext>();
+
+        context->_client = shared_from_this();
+        context->_packet = packet;
+
+        _server->PushPacketContext(context);
     }
 }
 
@@ -157,10 +167,8 @@ const bool Client::CanMakePacket(OUT char* packet_buffer, OUT int& packet_size)
     return true;
 }
 
-std::shared_ptr<BasePacket> Client::MakePacket(const char* packet_buffer, const int packet_size) // 지금은 packet_size를 안써도, 가변 size의 패킷들이 있어서 나중에 필요함.
+std::shared_ptr<BasePacket> Client::MakePacket(const char* packet_buffer)
 {
-    // todo : 생성자에 size집어넣는거 빼기. size는 보낼때 결정되야함... list형식이나 chat같은 패킷땜에
-
     PacketID packet_id = (PacketID)packet_buffer[sizeof(int)];
 
     std::shared_ptr<BasePacket> packet = nullptr;

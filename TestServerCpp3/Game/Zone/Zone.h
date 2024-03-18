@@ -36,12 +36,15 @@ private:
     static void Run();
 
     static void HandlePacketContext(std::shared_ptr<PacketContext> context);
+    
     static void ProcessPacket(cs_login* packet, std::shared_ptr<Client> client);
     static void ProcessPacket(cs_move* packet, std::shared_ptr<Client> client);
+    static void ProcessPacket(cs_logout* packet, std::shared_ptr<Client> client);
 
     static const bool CheckTile(const int x, const int y);
     static void SetObject(const int x, const int y, Object* const object);
     static void SetObject(const int current_x, const int current_y, const int next_x, const int next_y);
+    static void RemoveObject(const int x, const int y, const int object_id);
     static const bool GetCurrentPos(OUT int& out_x, OUT int& out_y, const int object_id);
 
 private:

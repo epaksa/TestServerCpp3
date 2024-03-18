@@ -36,7 +36,7 @@ void Server::Join()
     _pool_thread.join_all();
 }
 
-void Server::Broadcast(BasePacket& packet)
+void Server::Broadcast(BasePacket& packet, const int except_id/* = 0*/)
 {
     char* c = new char[BUFFER_SIZE] {0};
     std::shared_ptr<char> send_buffer(c);
@@ -48,6 +48,11 @@ void Server::Broadcast(BasePacket& packet)
 
         for (const std::shared_ptr<Client> client : _list_client)
         {
+            if (client->GetID() == except_id)
+            {
+                continue;
+            }
+
             client->Send(send_buffer, data_size);
         }
     }

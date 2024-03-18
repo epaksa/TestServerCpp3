@@ -22,7 +22,7 @@ public:
     void Initialize(const int io_thread_count);
     void Listen();
     void Join();
-    void Broadcast(BasePacket& packet);
+    void Broadcast(BasePacket& packet, const int except_id = 0);
 
     void OnSocketError(const int client_id);
 

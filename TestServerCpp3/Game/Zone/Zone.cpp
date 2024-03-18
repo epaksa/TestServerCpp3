@@ -102,9 +102,6 @@ Concurrency::concurrent_queue<std::shared_ptr<PacketContext>>& Zone::GetPacketCo
 
 void Zone::HandlePacketContext(std::shared_ptr<PacketContext> context)
 {
-    // cs 패킷 보낸 client한테만 응답해야하면, context안에 client를 Process~()함수로 넘겨주기
-    std::string log;
-
     switch (context->_packet->_packet_id)
     {
     case PacketID::cs_login:
@@ -112,6 +109,9 @@ void Zone::HandlePacketContext(std::shared_ptr<PacketContext> context)
         break;
     case PacketID::cs_move:
         ProcessPacket((cs_move*)context->_packet.get(), context->_client);
+        break;
+    case PacketID::cs_logout:
+        ProcessPacket((cs_logout*)context->_packet.get(), context->_client);
         break;
     default:
         break;
@@ -137,9 +137,24 @@ void Zone::ProcessPacket(cs_login* packet, std::shared_ptr<Client> client)
     SetObject(x, y, player);
 
     sc_login response;
-    response._client_id = packet->_client_id;
-    response._x = x;
-    response._y = y;
+    response._my_info._client_id = packet->_client_id;
+    response._my_info._x = x;
+    response._my_info._y = y;
+
+    for (auto& [id, pos] : _object_info)
+    {
+        if (id == response._my_info._client_id)
+        {
+            continue;
+        }
+
+        sc_login::ClientPos client_pos;
+        client_pos._client_id = id;
+        client_pos._x = pos._x;
+        client_pos._y = pos._y;
+        
+        response._list_client.push_back(client_pos);
+    }
 
     const std::string log = std::format("cs_login => id : {}. x : {}, y : {}", packet->_client_id, x, y);
     Log::Write(log);
@@ -151,7 +166,7 @@ void Zone::ProcessPacket(cs_login* packet, std::shared_ptr<Client> client)
     broadcast_packet._x = x;
     broadcast_packet._y = y;
 
-    _server->Broadcast(broadcast_packet);
+    _server->Broadcast(broadcast_packet, packet->_client_id);
 }
 
 void Zone::ProcessPacket(cs_move* packet, std::shared_ptr<Client> client)
@@ -194,6 +209,29 @@ void Zone::ProcessPacket(cs_move* packet, std::shared_ptr<Client> client)
     }
 }
 
+void Zone::ProcessPacket(cs_logout* packet, std::shared_ptr<Client> client)
+{
+    int current_x = 0;
+    int current_y = 0;
+
+    if (false == GetCurrentPos(OUT current_x, OUT current_y, client->GetID()))
+    {
+        const std::string log = std::format("cs_logout => not found current pos. id : {}", client->GetID());
+        Log::Write(log);
+        return;
+    }
+
+    RemoveObject(current_x, current_y, client->GetID());
+
+    const std::string log = std::format("cs_logout => id : {}", client->GetID());
+    Log::Write(log);
+
+    sc_logout broadcast_packet;
+    broadcast_packet._client_id = client->GetID();
+
+    _server->Broadcast(broadcast_packet);
+}
+
 const bool Zone::CheckTile(const int x, const int y)
 {
     if (y < 0 || y >= _tile.size())
@@ -233,6 +271,12 @@ void Zone::SetObject(const int current_x, const int current_y, const int next_x,
             return;
         }
     }
+}
+
+void Zone::RemoveObject(const int x, const int y, const int object_id)
+{
+    _tile[y][x]._object = nullptr;
+    _object_info.erase(object_id);
 }
 
 const bool Zone::GetCurrentPos(OUT int& out_x, OUT int& out_y, const int object_id)
