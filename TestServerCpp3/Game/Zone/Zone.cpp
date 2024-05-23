@@ -8,11 +8,6 @@
 #include <Network/Server.h>
 
 Zone ZONE;
-Concurrency::concurrent_queue<std::shared_ptr<PacketContext>> Zone::_packet_context_queue;
-std::shared_ptr<Server> Zone::_server = nullptr;
-std::vector<std::vector<Tile>> Zone::_tile;
-std::map<int, Pos> Zone::_object_info;
-Random Zone::_random;
 
 void Zone::Initialize(const std::string& map_file_name)
 {
@@ -81,7 +76,7 @@ void Zone::Run()
 
 void Zone::Start()
 {
-    std::thread zone_thread(&Zone::Run);
+    std::thread zone_thread(&Zone::Run, &ZONE);
     zone_thread.detach();
 }
 
